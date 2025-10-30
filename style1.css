@@ -1,0 +1,230 @@
+/* Google font setup */
+body {
+  font-family: "Inter", sans-serif;
+  color: #111;
+  margin: 0;
+  background-color: #fff;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+}
+
+.logo {
+  color: #0fa30f;
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #111;
+  font-weight: 500;
+}
+
+.nav-links a.active,
+.nav-links a:hover {
+  color: #0fa30f;
+}
+
+.menu-icon {
+  display: none;
+}
+
+/* Hero Section */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 3rem 0;
+  gap: 2rem;
+}
+
+.hero-text {
+  flex: 1 1 45%;
+}
+
+.tag {
+  background: #f9d342;
+  color: #000;
+  font-weight: 600;
+  padding: 0.4rem 0.8rem;
+  border-radius: 4px;
+}
+
+.hero-text h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin: 1rem 0;
+}
+
+.hero-text p {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 1.5rem;
+}
+
+.btn {
+  background: #0fa30f;
+  color: #fff;
+  border: none;
+  padding: 0.9rem 1.8rem;
+  font-size: 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #0c7e0c;
+}
+
+.hero-img {
+  flex: 1 1 45%;
+  position: relative;
+}
+
+.hero-img img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.rating {
+  position: absolute;
+  top: 15%;
+  left: -20%;
+  background: #fff;
+  padding: 0.6rem 1rem;
+  border-radius: 50px;
+  font-size: 0.9rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.quality {
+  position: absolute;
+  top: 10%;
+  right: -10%;
+}
+
+/* Services */
+.services {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  padding: 2rem 0;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+  text-align: center;
+}
+
+.service-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.service-item h3 {
+  color: #111;
+  margin: 0;
+}
+
+.service-item p {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+/* Benefits */
+.benefits {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  flex-wrap: wrap;
+  padding: 3rem 0;
+}
+
+.benefit-img img {
+  width: 100%;
+  border-radius: 12px;
+}
+
+.benefit-text h5 {
+  color: #0fa30f;
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.benefit-text h2 {
+  font-size: 2rem;
+  margin: 1rem 0;
+}
+
+.benefit-text ul {
+  list-style: none;
+  padding: 0;
+}
+
+.benefit-text li {
+  margin-bottom: 0.7rem;
+  font-size: 1rem;
+}
+
+.benefit-text li i {
+  color: #0fa30f;
+  margin-right: 8px;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-img img {
+    width: 80%;
+    margin: auto;
+  }
+
+  .rating, .quality {
+    position: static;
+    margin-top: 1rem;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .menu-icon {
+    display: block;
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-text h1 {
+    font-size: 2rem;
+  }
+  .benefit-text h2 {
+    font-size: 1.6rem;
+  }
+}
