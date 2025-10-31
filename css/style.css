@@ -454,7 +454,7 @@ h2 {
     CTA SECTION
 ===================== */
 .cta-section {
-    background-image: url('../images/CTA-Background.png'); 
+    background-image: url('../images/vegan.png'); 
     background-size: cover;
     background-position: center;
     padding: 5rem 0;
@@ -617,6 +617,7 @@ h2 {
         right: 0;
         width: 80px;
         display: block; 
+        z-index: 100px;
     }
 
     /* Sections with two columns */
