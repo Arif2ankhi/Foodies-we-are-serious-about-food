@@ -64,6 +64,7 @@ h2 {
     background-position: center top;
     /* Adjusted padding-bottom to contain the brand logos */
     padding-bottom: 5rem; 
+    /* margin-top: 4rem; */
 }
 
 /* Navbar */
@@ -72,6 +73,7 @@ h2 {
     justify-content: space-between;
     align-items: center;
     padding: 1rem 0;
+    margin-bottom: 4rem;
 }
 
 .logo {
@@ -105,15 +107,24 @@ h2 {
     display: none; /* Hidden on desktop */
 }
 
-/* =====================
-    HERO SECTION
-===================== */
+.ellipse {
+    position: absolute;
+    margin-top: 16px;
+    right: 562px;
+    
+    
+}
+
+
+    /* HERO SECTION */
+
 .hero {
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 2rem;
     padding: 2rem 0;
+    
 }
 
 .hero-text {
@@ -139,6 +150,7 @@ h2 {
     flex: 1 1 45%;
     position: relative;
     max-width: 50%;
+    margin-top: 4rem;
 }
 
 .hero-img img {
@@ -151,7 +163,7 @@ h2 {
     position: absolute;
     top: 15%;
     left: -20%;
-    background: #fff;
+    background: #ffffff;
     padding: 0.6rem 1rem;
     border-radius: 50px;
     font-size: 0.9rem;
@@ -159,7 +171,7 @@ h2 {
 }
 
 .rating i {
-    color: gold;
+    color: rgb(0, 255, 21);
 }
 
 .quality {
@@ -173,9 +185,9 @@ h2 {
     position: absolute;
     bottom: 0; 
     right: -10%;
-    z-index: -1; 
-    width: 120px; 
+    width: 160px; 
     height: auto;
+    z-index: 1;
 }
 
 /* Brand Logos (Now inside .bg-section) */
@@ -189,11 +201,13 @@ h2 {
     max-width: 100%;
     height: auto;
     opacity: 0.9;
+    margin-top: 1rem;
+    margin-right: 5rem;
 }
 
-/* =====================
+/* 
     SERVICES SECTION
-===================== */
+ */
 .services {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -202,12 +216,16 @@ h2 {
     border-top: 1px solid #eee;
     border-bottom: 1px solid #eee;
     text-align: left;
+    
+    
 }
 
 .service-item {
     display: flex;
     align-items: center;
     gap: 1rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
 }
 
 .service-item img {
@@ -229,15 +247,17 @@ h2 {
     margin: 0;
 }
 
-/* =====================
+/* 
     BENEFITS SECTION
-===================== */
+ */
 .benefits {
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 3rem;
     padding: 3rem 0;
+   
+    
 }
 
 .benefit-img, .benefit-text {
@@ -248,6 +268,8 @@ h2 {
     width: 100%;
     height: auto;
     border-radius: 12px;
+    margin-top: 1rem;
+
 }
 
 .benefit-text h2 {
@@ -268,13 +290,14 @@ h2 {
 }
 
 .benefit-text li i {
-    color: #0fa30f; /* Green */
+    color: #09cc09; /* Green */
+    /* font-weight: bold; */
     margin-right: 8px;
 }
 
-/* =====================
+/*
     STATS & VEGGIE DRINK
-===================== */
+ */
 .stats-section {
     display: flex;
     align-items: center;
@@ -318,72 +341,97 @@ h2 {
     height: auto;
     border-radius: 12px;
 }
+ /* Features/ varities of Food  */
 
-/* =====================
-    VARIETY OF FOODS
-===================== */
-.variety-section {
-    padding: 3rem 0;
-    text-align: center;
+ .variety-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 50px 10px 50px 10px;
+  /text-align: center;
 }
 
-.variety-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 1.5rem;
+/* Titles */
+.section-feature {
+  color: #888;
+  margin-bottom: 5px;
 }
 
-.food-card {
-    position: relative;
-    overflow: hidden;
-    border-radius: 10px;
-    height: 300px; 
+.main-title {
+  font-size: 2.5em;
+  margin-bottom: 40px;
 }
 
-.food-card img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-    transition: transform 0.3s;
+/*  (Desktop/4 Columns) --- */
+.parent-grid {
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 0;
 }
 
-.food-card:hover img {
-    transform: scale(1.05);
+/* General box styling */
+.box {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  justify-content: center;
+  /* min-height: 25vw; */
+  border: 2px solid green;
 }
 
-.food-card-content {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    padding: 1rem;
-    background: linear-gradient(to top, rgba(0,0,0,0.8), rgba(0,0,0,0));
-    color: #fff;
-    text-align: left;
+/* Image box styling */
+.image-box {
+  padding: 0;
 }
 
-.food-card-content h4 {
-    margin: 0;
-    font-size: 1.1rem;
+.food-img {
+  width: 100%;
+  height: 100%;
+  /* width: 292px;
+  height: 292px; */
+
+  object-fit: cover;
+  /* object-fit: fill; */
+  /* object-fit:none; */
+  display: block;
 }
 
-.food-card-content a {
-    color: #0fa30f; /* Green */
-    text-decoration: none;
-    font-size: 0.9rem;
-    font-weight: 500;
-    transition: color 0.3s;
+/* Content box styling */
+.content-box {
+  text-align: left;
+  background-color: #f3fcf7;
 }
 
-.food-card-content a:hover {
-    color: #fff;
+.content-box h3 {
+  margin-bottom: 10px;
+  font-size: 1.5em;
+}
+
+.content-box p {
+  margin-bottom: 20px;
+  color: #555;
+}
+
+.discover-link {
+  color: #4caf50;
+  background: #e6f9f0;
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-block;
+  transition: color 0.2s;
+  /* border: 1px solid rgba(235, 222, 222, 0.918); */
+  display: inline-block;
+}
+
+.discover-link:hover {
+  color: #2e8b57;
 }
 
 
-/* =====================
-    POPULAR PRODUCTS
-===================== */
+
+/*  POPULAR PRODUCTS */
 .products-section {
     padding: 3rem 0;
     text-align: center;
@@ -441,6 +489,10 @@ h2 {
 .product-item .btn {
     padding: 0.5rem 1rem;
     font-size: 0.9rem;
+}
+
+.banana-border {
+    border: 2ps solid green;
 }
 
 /* Individual product background colors for the circle image wrapper */
@@ -539,6 +591,7 @@ h2 {
 .newsletter-form {
     display: flex;
     margin-top: 1rem;
+    
 }
 
 .newsletter-form input[type="email"] {
@@ -547,6 +600,7 @@ h2 {
     border-radius: 4px 0 0 4px;
     flex-grow: 1;
     font-size: 0.9rem;
+    margin-right: 1rem;
 }
 
 .newsletter-form button {
@@ -584,6 +638,7 @@ h2 {
     .menu-icon {
         display: block; 
         font-size: 1.5rem;
+        color: #09cc09;
     }
 
     .hero {
@@ -639,10 +694,24 @@ h2 {
     }
 
     /* Variety Grid */
-    .variety-grid {
+    /* .variety-grid {
         grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
-    }
+    } */
 
+    .parent-grid {
+    /* On tablets  show 2 columns */
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .box {
+    min-height: 40vw;
+  }
+
+  .main-title {
+    font-size: 2em;
+  }
+    
+    
     /* Footer */
     .footer-grid {
         grid-template-columns: repeat(2, 1fr); 
@@ -659,10 +728,16 @@ h2 {
         max-width: 100%;
     }
 
-    /* Hide the polkadot completely on tiny screens to save space */
+    
     .polkadot {
-        display: none; 
-    }
+    position: absolute;
+    bottom: 0; 
+    right: -10%;
+    z-index: -1; 
+    width: 180px; 
+    /* height: auto; */
+    z-index: 1;
+}
 
     .services {
         grid-template-columns: 1fr; 
@@ -682,9 +757,28 @@ h2 {
     }
 
     /* Variety Grid */
-    .variety-grid {
+    /* .variety-grid {
         grid-template-columns: 1fr; 
-    }
+    } */
+
+     .parent-grid {
+   
+    grid-template-columns: 1fr;
+  }
+
+  .box {
+    
+    min-height: 300px;
+  }
+
+  .content-box {
+    
+    padding: 20px;
+  }
+
+  .main-title {
+    font-size: 1.5em;
+  }
 
     /* Popular Products */
     .products-grid {
@@ -696,7 +790,13 @@ h2 {
     }
 
     /* Footer */
+    .footer-col {
+       justify-content: center;
+       justify-items: center;
+
+    }
     .footer-grid {
         grid-template-columns: 1fr; 
+        
     }
 }
