@@ -55,9 +55,9 @@ h2 {
     font-weight: 700;
 }
 
-/* =====================
-    HEADER & BACKGROUND
-===================== */
+/*
+HEADER & BACKGROUND
+*/
 .bg-section {
     background-image: url('../images/Background.png');
     background-size: cover;
